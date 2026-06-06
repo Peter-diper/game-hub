@@ -25,7 +25,6 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   return (
     <>
       <Heading fontSize="2xl" marginTop={9} marginBottom={3}>
-        <Spinner color="#e31313" />
         Genres
       </Heading>
       <List>

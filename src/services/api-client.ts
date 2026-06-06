@@ -1,8 +1,8 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { GameQuery } from "../App";
 
 export interface FetchResponse<T> {
   count: number;
+  next: string | null;
   results: T[];
 }
 
