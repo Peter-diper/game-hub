@@ -20,7 +20,7 @@ const GenreList = ({ selectedGenreId, onSelectGenre }: Props) => {
 
   if (error) return null;
 
-  if (isLoading) return Spinner;
+  if (isLoading) return <Spinner />;
 
   return (
     <>
