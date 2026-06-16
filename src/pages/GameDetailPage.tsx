@@ -5,6 +5,7 @@ import useGame from "../hooks/useGame";
 
 import GameAtributes from "../components/GameAtributes";
 import GameTrailer from "../components/GameTrailer";
+import GameImage from "../components/GameScreenshot";
 export default function GameDetailPage() {
   const { slug } = useParams();
   const { data: game, error, isLoading } = useGame(slug!);
@@ -17,6 +18,7 @@ export default function GameDetailPage() {
       <ExpandableText>{game.description_raw}</ExpandableText>
       <GameAtributes game={game} />
       <GameTrailer gameId={game.id} />
+      <GameImage game_pk={game.slug} />
     </Box>
   );
 }
