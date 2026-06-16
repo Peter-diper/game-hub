@@ -1,11 +1,6 @@
 form {
   width: 100%;
 }
-
 video {
-  width: 100%;
-  max-width: 1200px;
-  margin: 10px auto;
-  border-radius: 25px;
-  box-shadow: 0 0 20px 1px rgba(240, 248, 190, 0.088);
+  border-radius: 15px;
 }
