@@ -1,5 +1,5 @@
 import useGenres from "./useGenres";
-import { Genre } from "../entities/Genre";
+import Genre  from "../entities/Genre";
 
 export function useGenre(id?: number) {
   const { data: genres } = useGenres();

@@ -1,4 +1,5 @@
 import { Box, GridItem, Heading, SimpleGrid, Spinner } from "@chakra-ui/react";
+import { ComponentType } from "react";
 import { useParams } from "react-router-dom";
 import ExpandableText from "../components/ExpandableText";
 import useGame from "../hooks/useGame";
@@ -6,6 +7,8 @@ import useGame from "../hooks/useGame";
 import GameAtributes from "../components/GameAtributes";
 import GameTrailer from "../components/GameTrailer";
 import Screenshot from "../components/GameScreenshot";
+const GameTrailerComponent = GameTrailer as ComponentType<{ gameId: number }>;
+
 export default function GameDetailPage() {
   const { slug } = useParams();
   const { data: game, error, isLoading } = useGame(slug!);
@@ -20,7 +23,7 @@ export default function GameDetailPage() {
         <GameAtributes game={game} />
       </GridItem>
       <GridItem>
-        <GameTrailer gameId={game.id} />
+        <GameTrailerComponent gameId={game?.id} />
         <Screenshot slug={game.slug} />
       </GridItem>
     </SimpleGrid>

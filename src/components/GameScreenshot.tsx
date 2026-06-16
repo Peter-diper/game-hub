@@ -5,9 +5,11 @@ interface Props {
   slug: string;
 }
 
+type picture = string;
+
 export default function Screenshot({ slug }: Props) {
   const { data, error, isLoading } = useScreenshots(slug);
-  
+
   if (isLoading) return null;
   if (error || !data) throw error;
 
@@ -20,7 +22,7 @@ export default function Screenshot({ slug }: Props) {
       width={"100%"}
       maxWidth={"1200px"}
     >
-      {data?.results.map((p) => (
+      {data?.results.map((p: { id: number; image: string }) => (
         <Image key={p.id} borderRadius={12} src={p.image} />
       ))}
       <button></button>

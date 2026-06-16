@@ -1,5 +1,5 @@
 import usePlatforms from "./usePlatforms";
-import { Platform } from "../entities/Platform";
+import  Platform  from "../entities/Platform";
 
 export function usePlatform(id: number | undefined) {
   const { data: platfroms } = usePlatforms();

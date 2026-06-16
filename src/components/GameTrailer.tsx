@@ -3,12 +3,12 @@ import useTrailer from "../hooks/useTrailers";
 interface Props {
   gameId: number;
 }
+
 export default function GameTrailer({ gameId }: Props) {
   const { data, error, isLoading } = useTrailer(gameId);
 
   if (isLoading) return;
   if (error) throw error;
-  console.log(data);
 
   const first = data?.results[0];
 
