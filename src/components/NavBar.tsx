@@ -6,7 +6,7 @@ import SearchInput from "./SearchInput";
 const NavBar = () => {
   return (
     <HStack padding="10px">
-      <Link to={"/"}>🐢&nbsp;rasool&nbsp;fada&nbsp;🐢</Link>
+      <Link to={"/game-hub"}>🐢&nbsp;rasool&nbsp;fada&nbsp;🐢</Link>
       <SearchInput />
       <ColorModeSwitch />
     </HStack>
